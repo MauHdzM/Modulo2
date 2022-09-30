@@ -9,15 +9,15 @@ lista=uwu(int(sys.argv[1]))
 #función para evaluar que números son primos de dicha lista
 def unu(b):
     lista1=[]
-#corremos un for que vaya en el rango la lista para analiza cada numero dentro de esta
+#corremos un for que vaya en el rango de la lista para analizar cada número dentro de esta
     for x in b:
-        if x==2:
+        if x==2: #en caso de ser 2 lo adunta automáticamente a la lista de números primos
             lista1.append(x)
         if x>2:
             primo=True
-        #Dividimos la iteración entre todos los números que van antes 
+        #Dividimos la iteración entre todos los números que van antes de este y después del dos
             for p in range(2, x-1):
-                if x%p== 0: #en caso de que uno de dichos residuos sea igual a cero el número es compuesto
+                if x%p== 0: #en caso de que uno de dichos residuos sea igual a cero el número es compuesto. Recordemos que un número sólo tiene residuo 0 cuando se divide entre 1 o sí mismo
                     primo=False
                     
             if primo: #en caso de que el número sea primo se agregará a otra lista
