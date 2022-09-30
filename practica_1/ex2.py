@@ -7,16 +7,18 @@ def uwu(a):
  return lista
 lista=uwu(int(sys.argv[1]))
 def unu(b):
- for x in b:
-    if x==2:
-        lista1.append(x)
-    if x>2:
-        primo=True
-        for p in range(2, x-1):
-            if x%p== 0:
-                primo=False
-                
-        if primo:
+    lista1=[]
+    for x in b:
+        if x==2:
             lista1.append(x)
- print(lista1)
-unu(lista)
+        if x>2:
+            primo=True
+            for p in range(2, x-1):
+                if x%p== 0:
+                    primo=False
+                    
+            if primo:
+                lista1.append(x)
+    print (lista1)
+    return lista1
+lista1=unu(lista)
